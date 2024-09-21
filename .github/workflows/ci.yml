@@ -64,7 +64,10 @@ jobs:
 
             CONFIG_LUCI_LANG_zh_Hans=y
             CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
-            CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y            
+            CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
+
+            CONFIG_NSS_DRV_WIFI_MESH_ENABLE=y
+            CONFIG_PACKAGE_kmod-qca-nss-drv-wifi-meshmgr=y
           EOF
           make defconfig
 
