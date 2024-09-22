@@ -68,6 +68,11 @@ jobs:
 
             CONFIG_NSS_DRV_WIFI_MESH_ENABLE=y
             CONFIG_PACKAGE_kmod-qca-nss-drv-wifi-meshmgr=y
+            CONFIG_PACKAGE_wpad-basic-mbedtls=m
+            CONFIG_PACKAGE_kmod-zram=y
+            CONFIG_PACKAGE_zram-swap=y
+            CONFIG_PACKAGE_luci-app-cpufreq=y
+            CONFIG_PACKAGE_luci-i18n-cpufreq-zh-cn=y
           EOF
           make defconfig
 
