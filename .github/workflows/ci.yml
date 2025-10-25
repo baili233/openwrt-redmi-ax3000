@@ -41,12 +41,13 @@ jobs:
         run: |
           cat <<EOF | sed -E 's/^  //' >.config
             CONFIG_TARGET_ipq50xx=y
-            CONFIG_TARGET_ipq50xx_arm=y
+            CONFIG_TARGET_ipq50xx_aarch64=y
             CONFIG_TARGET_MULTI_PROFILE=y
             CONFIG_TARGET_ALL_PROFILES=y
             CONFIG_TARGET_PER_DEVICE_ROOTFS=y
 
-            CONFIG_ATH11K_MEM_PROFILE_256M=y
+            # CONFIG_ATH11K_MEM_PROFILE_256M is not set
+            CONFIG_ATH11K_MEM_PROFILE_512M=y
 
             CONFIG_IB=y
             # CONFIG_IB_STANDALONE is not set
@@ -61,6 +62,8 @@ jobs:
             CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y
 
             CONFIG_PACKAGE_luci=y
+            CONFIG_LUCI_LANG_zh_Hans=y
+            CONFIG_PACKAGE_luci-theme-argon=y
           EOF
           make defconfig
 
